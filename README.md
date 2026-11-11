@@ -31,7 +31,8 @@ The application frontend is structured into modular roles and interconnected scr
 - **Sign Up Screen** ([`signup_screen.dart`](lib/screens/auth/signup_screen.dart)) — Account registration with role selection (*Customer* vs. *Vendor Studio*).
 
 ### 2. Customer Shop & Patterns
-- **Home Screen** ([`customer_home_screen.dart`](lib/screens/customer/customer_home_screen.dart)) — Personalized greeting (*Hello, Arbab ✿*), real-time search, seasonal promotional drop banner, category filtering (*Amigurumi, Wearables, Blankets, Bags*), and trending creations with direct links to maker profiles.
+- **Home Screen** ([`customer_home_screen.dart`](lib/screens/customer/customer_home_screen.dart)) — Personalized greeting (*Hello, Arbab ✿*), real-time search, seasonal promotional drop banner, category filtering (*Amigurumi, Wearables, Blankets, Bags*), trending creations, and direct custom order prompt.
+- **Autumn Drop Collection** ([`collection_explore_screen.dart`](lib/screens/customer/collection_explore_screen.dart)) — Curated seasonal edit (*Granny squares are back*) showcasing handmade wearables, bags, and matching patterns.
 - **Pattern Library** ([`pattern_library_screen.dart`](lib/screens/customer/pattern_library_screen.dart)) — Curated digital patterns with difficulty badges (*Beginner*, *Intermediate*, *Advanced*), hook sizes, estimated crafting times, and pricing.
 - **Interactive Pattern & Product Detail** ([`pattern_detail_screen.dart`](lib/screens/customer/pattern_detail_screen.dart)) — Product specs, palette swatches, direct cart addition, and an interactive 12-step crochet guide with progress tracking and localized Roman Urdu tips.
 - **Artisan Public Storefront** ([`vendor_profile_view_screen.dart`](lib/screens/customer/vendor_profile_view_screen.dart)) — Public maker profile featuring artisan bio, verified badge, ratings, physical creations, digital patterns, customer reviews, and direct custom order requests.

@@ -11,6 +11,7 @@ class CustomerHomeScreen extends StatefulWidget {
   final VoidCallback onNotificationsTap;
   final VoidCallback onExploreBannerTap;
   final VoidCallback onSeeAllTrendingTap;
+  final VoidCallback? onCustomOrderTap;
 
   const CustomerHomeScreen({
     super.key,
@@ -19,6 +20,7 @@ class CustomerHomeScreen extends StatefulWidget {
     required this.onNotificationsTap,
     required this.onExploreBannerTap,
     required this.onSeeAllTrendingTap,
+    this.onCustomOrderTap,
   });
 
   @override
@@ -389,6 +391,58 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
                     return _buildProductCard(product);
                   },
                 ),
+              if (widget.onCustomOrderTap != null) ...[
+                const SizedBox(height: 20),
+                GestureDetector(
+                  onTap: widget.onCustomOrderTap,
+                  child: Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: AppColors.surfaceWarm,
+                      borderRadius: BorderRadius.circular(18),
+                      border: Border.all(color: AppColors.borderLight),
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(10),
+                          decoration: const BoxDecoration(
+                            color: AppColors.blush,
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Icon(Icons.auto_awesome, color: AppColors.primary, size: 20),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Request a Custom Piece',
+                                style: AppTypography.serif(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: AppColors.textPrimary,
+                                ),
+                              ),
+                              const SizedBox(height: 2),
+                              Text(
+                                'Apna color & size bataiye, maker bana dega.',
+                                style: AppTypography.sans(
+                                  fontSize: 11,
+                                  color: AppColors.textSecondary,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.chevron_right, size: 18, color: AppColors.primary),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
               const SizedBox(height: 16),
             ],
           ),

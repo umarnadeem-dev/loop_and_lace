@@ -11,6 +11,7 @@ import 'screens/auth/welcome_screen.dart';
 import 'screens/auth/login_screen.dart';
 import 'screens/auth/signup_screen.dart';
 import 'screens/customer/customer_home_screen.dart';
+import 'screens/customer/collection_explore_screen.dart';
 import 'screens/customer/pattern_library_screen.dart';
 import 'screens/customer/pattern_detail_screen.dart';
 import 'screens/customer/wishlist_screen.dart';
@@ -310,6 +311,29 @@ class _CustomerMainShellState extends State<CustomerMainShell> {
           );
         },
         onExploreBannerTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CollectionExploreScreen(
+                onBack: () => Navigator.pop(context),
+                onProductTap: (product) => _openProductDetail(product),
+                onMakerTap: (maker) => _openVendorProfile(maker),
+                onCustomOrderTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CustomOrderScreen(
+                        onBack: () => Navigator.pop(context),
+                        onRequestSent: () => Navigator.pop(context),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          );
+        },
+        onCustomOrderTap: () {
           Navigator.push(
             context,
             MaterialPageRoute(
