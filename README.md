@@ -1,87 +1,126 @@
-# Loop & Lace — Crochet Patterns & Handmade Shop
+# Loop & Lace — Crochet Patterns & Handmade Artisan Shop
 
 > **Mobile Application Development – Assignment 01**  
 > **Institution:** COMSATS University Islamabad, Department of Software Engineering  
-> **Submitted by:** Umar Nadeem (FA24-BSE-005), Arbab Jabeen (FA24-BSE-006)  
+> **Group Members:**  
+> - **Umar Nadeem** (FA24-BSE-005) — [@umarnadeem-dev](https://github.com/umarnadeem-dev)  
+> - **Arbab Jabeen** (FA24-BSE-006) — [@arbabjabeen](https://github.com/arbabjabeen)  
 > **Batch:** Software Engineering, Batch 2024  
-> **Date:** October 2026  
+> **Tech Stack:** Flutter 3.x, Dart 3.x, Material Design 3  
 
 ---
 
 ## 🧶 Overview
 
-**Loop & Lace** is a mobile application frontend built in Flutter that combines crochet patterns, an artisan handmade shop, custom orders, and seller/admin management tools into a unified experience.
+**Loop & Lace** is an artisan mobile marketplace and crochet crafting platform tailored for the Pakistani handicraft and maker community (*"Apna color & size bataiye, maker bana dega"*). It brings together crochet enthusiasts, independent handmade artisans, and platform administrators into a cohesive mobile ecosystem.
 
-The app supports three distinct user roles:
-1. **Customer Role** — Browse trending handmade items, follow step-by-step crochet guides, submit custom order requests, manage cart, track active orders, and save favorites.
-2. **Vendor Role** — Access the Vendor Studio dashboard, track monthly earnings, publish new listings (products or patterns), and fulfill incoming orders.
-3. **Admin Role** — Monitor platform metrics (total sales, orders, active vendors, customers), analyze weekly sales charts, and approve or reject vendor registrations.
-
----
-
-## 📱 Complete 22 Screen Inventory
-
-All 22 screens specified in the design document have been created:
-
-| # | Screen Name | Role | Description |
-|---|-------------|------|-------------|
-| **1** | [Welcome Screen](file:///lib/screens/auth/welcome_screen.dart) | All Users | Handmade product collage, cosy tagline, *Get started*, and *I already have an account* buttons. |
-| **2** | [Login](file:///lib/screens/auth/login_screen.dart) | All Users | Email & password inputs, password visibility toggle, Log in / Sign up switcher, Google sign-in. |
-| **3** | [Sign Up](file:///lib/screens/auth/signup_screen.dart) | All Users | Full name, email, password, and interactive role picker (*Customer* vs *Vendor*). |
-| **4** | [Home Screen](file:///lib/screens/customer/customer_home_screen.dart) | Customer | Greeting (*Hello, Arbab ✿*), search bar, Autumn Drop banner, category chips, and trending products. |
-| **5** | [Pattern Library](file:///lib/screens/customer/pattern_library_screen.dart) | Customer | Step-by-step guides with difficulty filters (*Beginner*, *Intermediate*, *Advanced*), duration, and prices. |
-| **6** | [Pattern Detail (Step 1)](file:///lib/screens/customer/pattern_detail_screen.dart) | Customer | Berry Bunny details, hook size, yarn type, color swatches, and Step 1/12 with Roman Urdu tips. |
-| **7** | [Pattern Detail (Step 10)](file:///lib/screens/customer/pattern_detail_screen.dart) | Customer | Advanced step tracker at Step 10/12 (83%) with interactive *Next step* / *Back* navigation. |
-| **8** | [Wishlist](file:///lib/screens/customer/wishlist_screen.dart) | Customer | Saved items with maker details, quick *Add to cart* actions, and sale notification reminder. |
-| **9** | [Custom Order Request](file:///lib/screens/customer/custom_order_screen.dart) | Customer | Description box, category selector, yarn color swatches, size picker, budget, and needed-by date. |
-| **10** | [My Cart](file:///lib/screens/customer/cart_screen.dart) | Customer | Cart item list with quantity controls, subtotal, delivery charges, total, payment options, and *Place order*. |
-| **11** | [Order Confirmation](file:///lib/screens/customer/order_confirmation_screen.dart) | Customer | Success checkmark, order summary card for #1043, and links to tracking or continuous shopping. |
-| **12** | [My Orders & Tracking](file:///lib/screens/customer/orders_tracking_screen.dart) | Customer | Orders grouped into Active, Delivered, Cancelled with a 4-step progress tracker (*Confirmed → Making → Shipped → Delivered*). |
-| **13** | [Notifications](file:///lib/screens/customer/notifications_screen.dart) | Customer | Grouped by *Today* and *Earlier* with unread indicator dots and *Mark all read* functionality. |
-| **14** | [Profile (Me)](file:///lib/screens/customer/customer_profile_screen.dart) | Customer | User avatar, name, location, orders, wishlist, saved patterns, and *Become a vendor* shortcut. |
-| **15** | [Vendor Studio Dashboard](file:///lib/screens/vendor/vendor_dashboard_screen.dart) | Vendor | Monthly earnings card (Rs 84,500, +18%), stats (42 orders, 12 patterns, 4.8 rating), and recent orders. |
-| **16** | [New Listing](file:///lib/screens/vendor/new_listing_screen.dart) | Vendor | Product/Pattern switch, photo uploader, title, category, price, making time, and *Publish listing*. |
-| **17** | [Vendor Orders](file:///lib/screens/vendor/vendor_orders_screen.dart) | Vendor | Summary counts (Pending, Making, Shipped) with *Accept*, *Decline*, and *Mark as shipped* buttons. |
-| **18** | [Pattern Library (Vendor View)](file:///lib/screens/customer/pattern_library_screen.dart) | Vendor | Pattern library preview for sellers with Vendor bottom navigation bar. |
-| **19** | [Vendor Profile (Me)](file:///lib/screens/customer/customer_profile_screen.dart) | Vendor | Vendor account management view with role-specific bottom navigation. |
-| **20** | [Admin Panel](file:///lib/screens/admin/admin_panel_screen.dart) | Admin | Owner control panel with 4 metric cards (Rs 1.2M sales, 1,284 orders), weekly sales bar chart, and vendor approvals. |
-| **21** | [Vendor Management](file:///lib/screens/admin/vendor_management_screen.dart) | Admin | Searchable and filterable vendor list (*Active*, *Pending*, *Suspended*) with instant approval actions. |
-| **22** | [Admin Profile (Me)](file:///lib/screens/customer/customer_profile_screen.dart) | Admin | Admin account view with Admin navigation (*Admin*, *App*, *Me*). |
+The application supports three distinct user roles:
+1. **Customer Experience** — Discover trending handmade crochet goods, follow step-by-step crochet patterns with localized Roman Urdu tips, request bespoke custom crochet pieces, manage cart with delivery options, track live courier shipments, write verified reviews, and manage multiple delivery addresses.
+2. **Vendor Studio** — An artisan dashboard tracking monthly earnings, order statuses (*Pending*, *Making*, *Shipped*), full catalog inventory management (physical goods vs. digital patterns), fast price/stock editing, and publishing new handmade listings.
+3. **Admin Control Panel** — Platform-wide overview tracking total revenue, order volume, active vendors, weekly sales volume visualizations, and vendor verification/approval workflows.
 
 ---
 
-## 🚀 How to Run
+## 📱 Application Screen Architecture
 
-### 1. Run on Chrome (Web)
+The application frontend is structured into modular roles and interconnected screens:
+
+### 1. Authentication & Onboarding
+- **Welcome Screen** ([`welcome_screen.dart`](lib/screens/auth/welcome_screen.dart)) — Artisanal showcase banner, branding tagline, and authentication entry points.
+- **Login Screen** ([`login_screen.dart`](lib/screens/auth/login_screen.dart)) — Email & password sign-in, password visibility toggle, role switching, and social sign-in simulation.
+- **Sign Up Screen** ([`signup_screen.dart`](lib/screens/auth/signup_screen.dart)) — Account registration with role selection (*Customer* vs. *Vendor Studio*).
+
+### 2. Customer Shop & Patterns
+- **Home Screen** ([`customer_home_screen.dart`](lib/screens/customer/customer_home_screen.dart)) — Personalized greeting (*Hello, Arbab ✿*), real-time search, seasonal promotional drop banner, category filtering (*Amigurumi, Wearables, Blankets, Bags*), and trending creations with direct links to maker profiles.
+- **Pattern Library** ([`pattern_library_screen.dart`](lib/screens/customer/pattern_library_screen.dart)) — Curated digital patterns with difficulty badges (*Beginner*, *Intermediate*, *Advanced*), hook sizes, estimated crafting times, and pricing.
+- **Interactive Pattern & Product Detail** ([`pattern_detail_screen.dart`](lib/screens/customer/pattern_detail_screen.dart)) — Product specs, palette swatches, direct cart addition, and an interactive 12-step crochet guide with progress tracking and localized Roman Urdu tips.
+- **Artisan Public Storefront** ([`vendor_profile_view_screen.dart`](lib/screens/customer/vendor_profile_view_screen.dart)) — Public maker profile featuring artisan bio, verified badge, ratings, physical creations, digital patterns, customer reviews, and direct custom order requests.
+- **Wishlist** ([`wishlist_screen.dart`](lib/screens/customer/wishlist_screen.dart)) — Saved handmade pieces with quick add-to-cart actions.
+
+### 3. Cart, Checkout & Orders
+- **Shopping Cart** ([`cart_screen.dart`](lib/screens/customer/cart_screen.dart)) — Dynamic cart items with quantity adjustment, item removal, subtotal calculation, delivery fees, and checkout progression.
+- **Checkout Screen** ([`checkout_screen.dart`](lib/screens/customer/checkout_screen.dart)) — Delivery address picker modal, shipping speed choices (*Standard Courier* vs. *Express Maker Dispatch*), payment method selection (*COD*, *JazzCash/EasyPaisa*, *Debit/Credit Card*), maker gift notes, and promo code support (`LOOP10`).
+- **Order Confirmation** ([`order_confirmation_screen.dart`](lib/screens/customer/order_confirmation_screen.dart)) — Order summary, order ID tracking badge, and direct pathways to live tracking or continuous browsing.
+- **Orders List & Filter** ([`orders_tracking_screen.dart`](lib/screens/customer/orders_tracking_screen.dart)) — Tabbed order history (*Active*, *Delivered*, *Cancelled*) with stepper indicators and review triggers.
+- **Live Order Details & Logistics Timeline** ([`order_detail_screen.dart`](lib/screens/customer/order_detail_screen.dart)) — 4-stage tracking timeline (*Ordered → Making → Shipped → Delivered*), Trax tracking number, itemized pricing, maker direct message button, and PDF invoice receipt generation.
+- **Write Review & Rating** ([`write_review_screen.dart`](lib/screens/customer/write_review_screen.dart)) — Interactive 5-star rating, craft praise chips (*Neat Stitches*, *Soft Combed Yarn*, *Heirloom Quality*), feedback notes, customer photo upload simulation, and public/anonymous posting toggle.
+- **Bespoke Custom Orders Tracker** ([`custom_orders_list_screen.dart`](lib/screens/customer/custom_orders_list_screen.dart)) — Dashboard tracking custom requests, maker quotes (*Reviewing*, *Quote Ready*, *In Making*), budget estimates, and *Accept & Pay* triggers.
+- **Custom Order Request Form** ([`custom_order_screen.dart`](lib/screens/customer/custom_order_screen.dart)) — Bespoke item request form with color swatches, yarn type, sizing, reference photo attachments, and deadline date selection.
+
+### 4. Account Management & Support
+- **Customer Profile (Me)** ([`customer_profile_screen.dart`](lib/screens/customer/customer_profile_screen.dart)) — Account avatar, location, quick navigation to orders, saved patterns, wishlist, addresses, vendor onboarding, and customer support.
+- **Saved Addresses Book** ([`address_list_screen.dart`](lib/screens/customer/address_list_screen.dart)) — Management interface for delivery addresses (*Home*, *Studio*, *Work*) across major Pakistani cities with add, edit, delete, and default toggles.
+- **Edit Profile** ([`edit_profile_screen.dart`](lib/screens/customer/edit_profile_screen.dart)) — Edit name, bio, craft skill level (*Beginner*, *Intermediate*, *Advanced Crafter*), city selector, and favorite craft projects.
+- **Help & Support Center** ([`help_support_screen.dart`](lib/screens/customer/help_support_screen.dart)) — Searchable accordion FAQs (custom orders, shipping across Pakistan, Roman Urdu abbreviations, delicate yarn hand-washing care), one-tap WhatsApp support, and direct ticket submission.
+- **Notifications Screen** ([`notifications_screen.dart`](lib/screens/customer/notifications_screen.dart)) — Activity feed for maker updates, custom order quotes, and seasonal promotions.
+
+### 5. Vendor Studio (Artisan Role)
+- **Vendor Dashboard** ([`vendor_dashboard_screen.dart`](lib/screens/vendor/vendor_dashboard_screen.dart)) — Monthly revenue hero card (*Rs 84,500, +18%*), quick stat badges (*Orders*, *Catalog*, *Rating*), new listing shortcuts, and recent order stream.
+- **Vendor Catalog & Inventory** ([`vendor_listings_screen.dart`](lib/screens/vendor/vendor_listings_screen.dart)) — Inventory management for physical creations and digital patterns with quick modal edits for titles and pricing.
+- **Vendor Orders** ([`vendor_orders_screen.dart`](lib/screens/vendor/vendor_orders_screen.dart)) — Order lifecycle actions (*Accept*, *Decline*, *Mark as shipped*) and drilldown into full order invoices.
+- **New Listing Publisher** ([`new_listing_screen.dart`](lib/screens/vendor/new_listing_screen.dart)) — Creation wizard for physical goods or patterns with photo uploaders, categories, prices, yarn types, and hook sizes.
+
+### 6. Admin Panel (Platform Owner Role)
+- **Admin Analytics Panel** ([`admin_panel_screen.dart`](lib/screens/admin/admin_panel_screen.dart)) — Metrics grid (*Total Sales Rs 1.2M*, *1,284 Orders*, *Active Vendors*, *Customers*), weekly sales performance bar chart, and vendor approval workflow cards.
+- **Vendor Verification & Management** ([`vendor_management_screen.dart`](lib/screens/admin/vendor_management_screen.dart)) — Searchable vendor directory filterable by status (*Active*, *Pending*, *Suspended*) with approval/rejection controls.
+
+---
+
+## 🎨 Design System & Palette
+
+- **Primary Brand (Plum / Berry):** `#8C254C` — Represents warmth and craft tradition.
+- **Accent (Sage Green):** `#5E8D75` — Represents organic cotton yarn and natural fibers.
+- **Background & Surfaces:** Warm off-white `#FAF7F2` and `#FFFFFF` with soft borders `#EAE2DC`.
+- **Soft Highlights:** Blush `#F5E4E8` and Peach `#F9D8CE`.
+- **Typography:** Serif display headings (`Georgia`) paired with clean sans-serif body typography (`Segoe UI` / `Outfit`).
+
+---
+
+## 👥 Group Contributions Breakdown
+
+Both team members contributed equally to the architecture, design, and code implementation of the project:
+
+| Member | GitHub Username | Key Contributions & Modules Owned |
+|---|---|---|
+| **Umar Nadeem** | [`@umarnadeem-dev`](https://github.com/umarnadeem-dev) | - Core App Architecture & Theme System ([`main.dart`](lib/main.dart), [`app_theme.dart`](lib/theme/app_theme.dart))<br>- Customer Discovery & Home Screen ([`customer_home_screen.dart`](lib/screens/customer/customer_home_screen.dart))<br>- Pattern Library & Interactive Step Guide ([`pattern_detail_screen.dart`](lib/screens/customer/pattern_detail_screen.dart))<br>- Shopping Cart & Checkout System ([`checkout_screen.dart`](lib/screens/customer/checkout_screen.dart))<br>- Real-time Order Tracking & Invoice Breakdown ([`order_detail_screen.dart`](lib/screens/customer/order_detail_screen.dart))<br>- Custom Order Quotes Tracker ([`custom_orders_list_screen.dart`](lib/screens/customer/custom_orders_list_screen.dart)) |
+| **Arbab Jabeen** | [`@arbabjabeen`](https://github.com/arbabjabeen) | - Authentication & Onboarding Flow ([`welcome_screen.dart`](lib/screens/auth/welcome_screen.dart), [`login_screen.dart`](lib/screens/auth/login_screen.dart), [`signup_screen.dart`](lib/screens/auth/signup_screen.dart))<br>- Vendor Studio Dashboard & Fulfillments ([`vendor_dashboard_screen.dart`](lib/screens/vendor/vendor_dashboard_screen.dart), [`vendor_orders_screen.dart`](lib/screens/vendor/vendor_orders_screen.dart))<br>- Vendor Catalog & Inventory Manager ([`vendor_listings_screen.dart`](lib/screens/vendor/vendor_listings_screen.dart))<br>- Admin Analytics & Vendor Verification ([`admin_panel_screen.dart`](lib/screens/admin/admin_panel_screen.dart), [`vendor_management_screen.dart`](lib/screens/admin/vendor_management_screen.dart))<br>- Delivery Address Book & Profile Management ([`address_list_screen.dart`](lib/screens/customer/address_list_screen.dart), [`edit_profile_screen.dart`](lib/screens/customer/edit_profile_screen.dart))<br>- Help & Support Center with FAQs ([`help_support_screen.dart`](lib/screens/customer/help_support_screen.dart)) |
+
+---
+
+## 🚀 How to Run the Project
+
+### 1. Clone the Shared Repository
 ```bash
-flutter run -d chrome
+git clone https://github.com/umarnadeem-dev/loop_and_lace.git
+cd loop_and_lace
 ```
 
-### 2. Run on Windows Desktop
+### 2. Install Dependencies
 ```bash
-flutter run -d windows
+flutter pub get
 ```
 
-### 3. Run on Mobile Device or Emulator (Android / iOS)
-```bash
-flutter run
-```
-
-### 4. Run Automated Tests
-```bash
-flutter test
-```
-
-### 5. Check Code Analysis
+### 3. Verify Code Analysis
 ```bash
 flutter analyze
 ```
+*(Expected output: `No issues found!`)*
 
----
+### 4. Run the Application
+- **On Chrome (Web):**
+  ```bash
+  flutter run -d chrome
+  ```
+- **On Windows Desktop:**
+  ```bash
+  flutter run -d windows
+  ```
+- **On Mobile Emulator / Device:**
+  ```bash
+  flutter run
+  ```
 
-## 🎨 Design System & Highlights
-
-- **Palette:** Rich burgundy/plum (`#8C254C`), soft sage green (`#5E8D75`), warm cream (`#FAF7F2`), and soft blush (`#F5E4E8`).
-- **Typography:** Display serif headings with clean sans-serif body text.
-- **Top Role & Screen Switcher:** Allows toggling between *Customer*, *Vendor*, and *Admin* roles, plus a quick **22 Screens** button to jump directly to any screen.
-- **Responsive Frame:** On wide screens (web/desktop), the app displays inside a realistic mobile device mockup frame matching the assignment presentation style.
+### 5. Run Automated Tests
+```bash
+flutter test
+```
