@@ -69,7 +69,7 @@ class _CustomOrderScreenState extends State<CustomOrderScreen> {
                         ),
                       ),
                       Text(
-                        'Apna color & size bataiye, maker bana dega.',
+                        'Tell us your custom colors & size, and our makers will craft it.',
                         style: AppTypography.sans(
                           fontSize: 12,
                           color: AppColors.textSecondary,

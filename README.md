@@ -12,10 +12,10 @@
 
 ## 🧶 Overview
 
-**Loop & Lace** is an artisan mobile marketplace and crochet crafting platform tailored for the Pakistani handicraft and maker community (*"Apna color & size bataiye, maker bana dega"*). It brings together crochet enthusiasts, independent handmade artisans, and platform administrators into a cohesive mobile ecosystem.
+**Loop & Lace** is an artisan mobile marketplace and crochet crafting platform tailored for the handicraft and maker community (*"Tell us your custom colors & size, and our makers will craft it"*). It brings together crochet enthusiasts, independent handmade artisans, and platform administrators into a cohesive mobile ecosystem.
 
 The application supports three distinct user roles:
-1. **Customer Experience** — Discover trending handmade crochet goods, follow step-by-step crochet patterns with localized Roman Urdu tips, request bespoke custom crochet pieces, manage cart with delivery options, track live courier shipments, write verified reviews, and manage multiple delivery addresses.
+1. **Customer Experience** — Discover trending handmade crochet goods, follow step-by-step crochet patterns with helpful crafting tips, request bespoke custom crochet pieces, manage cart with delivery options, track live courier shipments, write verified reviews, and manage multiple delivery addresses.
 2. **Vendor Studio** — An artisan dashboard tracking monthly earnings, order statuses (*Pending*, *Making*, *Shipped*), full catalog inventory management (physical goods vs. digital patterns), fast price/stock editing, and publishing new handmade listings.
 3. **Admin Control Panel** — Platform-wide overview tracking total revenue, order volume, active vendors, weekly sales volume visualizations, and vendor verification/approval workflows.
 
@@ -34,7 +34,7 @@ The application frontend is structured into modular roles and interconnected scr
 - **Home Screen** ([`customer_home_screen.dart`](lib/screens/customer/customer_home_screen.dart)) — Personalized greeting (*Hello, Arbab ✿*), real-time search, seasonal promotional drop banner, category filtering (*Amigurumi, Wearables, Blankets, Bags*), trending creations, and direct custom order prompt.
 - **Autumn Drop Collection** ([`collection_explore_screen.dart`](lib/screens/customer/collection_explore_screen.dart)) — Curated seasonal edit (*Granny squares are back*) showcasing handmade wearables, bags, and matching patterns.
 - **Pattern Library** ([`pattern_library_screen.dart`](lib/screens/customer/pattern_library_screen.dart)) — Curated digital patterns with difficulty badges (*Beginner*, *Intermediate*, *Advanced*), hook sizes, estimated crafting times, and pricing.
-- **Interactive Pattern & Product Detail** ([`pattern_detail_screen.dart`](lib/screens/customer/pattern_detail_screen.dart)) — Product specs, palette swatches, direct cart addition, and an interactive 12-step crochet guide with progress tracking and localized Roman Urdu tips.
+- **Interactive Pattern & Product Detail** ([`pattern_detail_screen.dart`](lib/screens/customer/pattern_detail_screen.dart)) — Product specs, palette swatches, direct cart addition, and an interactive 12-step crochet guide with progress tracking and helpful crafting tips.
 - **Artisan Public Storefront** ([`vendor_profile_view_screen.dart`](lib/screens/customer/vendor_profile_view_screen.dart)) — Public maker profile featuring artisan bio, verified badge, ratings, physical creations, digital patterns, customer reviews, and direct custom order requests.
 - **Wishlist** ([`wishlist_screen.dart`](lib/screens/customer/wishlist_screen.dart)) — Saved handmade pieces with quick add-to-cart actions.
 
@@ -52,7 +52,7 @@ The application frontend is structured into modular roles and interconnected scr
 - **Customer Profile (Me)** ([`customer_profile_screen.dart`](lib/screens/customer/customer_profile_screen.dart)) — Account avatar, location, quick navigation to orders, saved patterns, wishlist, addresses, vendor onboarding, and customer support.
 - **Saved Addresses Book** ([`address_list_screen.dart`](lib/screens/customer/address_list_screen.dart)) — Management interface for delivery addresses (*Home*, *Studio*, *Work*) across major Pakistani cities with add, edit, delete, and default toggles.
 - **Edit Profile** ([`edit_profile_screen.dart`](lib/screens/customer/edit_profile_screen.dart)) — Edit name, bio, craft skill level (*Beginner*, *Intermediate*, *Advanced Crafter*), city selector, and favorite craft projects.
-- **Help & Support Center** ([`help_support_screen.dart`](lib/screens/customer/help_support_screen.dart)) — Searchable accordion FAQs (custom orders, shipping across Pakistan, Roman Urdu abbreviations, delicate yarn hand-washing care), one-tap WhatsApp support, and direct ticket submission.
+- **Help & Support Center** ([`help_support_screen.dart`](lib/screens/customer/help_support_screen.dart)) — Searchable accordion FAQs (custom orders, shipping across Pakistan, crochet abbreviations, delicate yarn hand-washing care), one-tap WhatsApp support, and direct ticket submission.
 - **Notifications Screen** ([`notifications_screen.dart`](lib/screens/customer/notifications_screen.dart)) — Activity feed for maker updates, custom order quotes, and seasonal promotions.
 
 ### 5. Vendor Studio (Artisan Role)

@@ -428,7 +428,7 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
                               ),
                               const SizedBox(height: 2),
                               Text(
-                                'Apna color & size bataiye, maker bana dega.',
+                                'Choose your colors & size, and our makers will craft it.',
                                 style: AppTypography.sans(
                                   fontSize: 11,
                                   color: AppColors.textSecondary,

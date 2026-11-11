@@ -34,13 +34,13 @@ class PatternStep {
   final int stepNumber;
   final int totalSteps;
   final String instruction;
-  final String tipUrdu;
+  final String craftingTip;
 
   PatternStep({
     required this.stepNumber,
     required this.totalSteps,
     required this.instruction,
-    required this.tipUrdu,
+    required this.craftingTip,
   });
 
   int get progressPercent => ((stepNumber / totalSteps) * 100).round();

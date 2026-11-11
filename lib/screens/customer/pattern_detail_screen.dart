@@ -264,7 +264,7 @@ class _PatternDetailScreenState extends State<PatternDetailScreen> {
                     ),
                     const SizedBox(height: 14),
 
-                    // Instruction box (with Roman Urdu)
+                    // Instruction box (with crafting tip)
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.all(16),
@@ -286,7 +286,7 @@ class _PatternDetailScreenState extends State<PatternDetailScreen> {
                           ),
                           const SizedBox(height: 6),
                           Text(
-                            stepData.tipUrdu,
+                            stepData.craftingTip,
                             style: AppTypography.sans(
                               fontSize: 12,
                               color: AppColors.textSecondary,

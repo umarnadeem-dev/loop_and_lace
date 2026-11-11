@@ -32,9 +32,9 @@ class _HelpSupportScreenState extends State<HelpSupportScreen> {
       'category': 'Shipping',
     },
     {
-      'question': 'Are the crochet patterns available in Urdu?',
+      'question': 'Are the crochet patterns beginner-friendly?',
       'answer':
-          'Yes! Loop & Lace is designed especially for our local crafting community. Every pattern step includes practical tips and stitch instructions in Roman Urdu alongside universal crochet abbreviations (sc, inc, dec, ch).',
+          'Yes! Loop & Lace is designed for crafters of all skill levels. Every pattern step includes helpful crafting tips alongside universal crochet abbreviations (sc, inc, dec, ch).',
       'category': 'Patterns',
     },
     {
